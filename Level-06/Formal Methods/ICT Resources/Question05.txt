@@ -1,0 +1,27 @@
+Machine Gadget
+
+SETS 
+	GADGETS = {cluncky, dodgy, questionable};
+	PARTS = {cogs, hinges, levers}
+
+CONSTANTS 
+	required
+
+PROPERTIES
+	required : GARGETS <-> PARTS & 
+	required = {cluncky |-> cogs, cluncky |-> hinges, dodgy |-> cogs, dodgy |-> levers, questionable |-> hinges, questionable |-> levers}
+
+VARIABLE 
+	supply
+
+INAVRIANT 
+	supply : PARTS - - > NAT1 &
+	supply = {cogs |-> 5, hinges |-> 5, levers |-> 5}  // Alternative way - supply := PARTS * {5}
+
+OPERATIONS
+
+
+END
+
+
+	
